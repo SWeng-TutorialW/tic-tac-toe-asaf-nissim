@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="il.cshaifasweng.OCSFMediatorExample.client.PrimaryController">
+<AnchorPane fx:id="Port" prefHeight="386.0" prefWidth="562.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="il.cshaifasweng.OCSFMediatorExample.client.PrimaryController">  <!-- 👈 החלף בשם האמיתי של הקונטרולר שלך -->
    <children>
-      <Label text="Welcome" />
-      <Button mnemonicParsing="false" onAction="#sendWarning" text="Send me a warning!" />
+      <Label fx:id="port_wrong" layoutX="357.0" layoutY="158.0" prefHeight="33.0" prefWidth="160.0" />
+      <TextField fx:id="IP" layoutX="198.0" layoutY="88.0" prefHeight="33.0" prefWidth="149.0" />
+      <TextField fx:id="port_box" layoutX="198.0" layoutY="158.0" prefHeight="33.0" prefWidth="149.0" />
+      <Button fx:id="connect" layoutX="228.0" layoutY="260.0" mnemonicParsing="false" onAction="#Connect" prefHeight="25.0" prefWidth="89.0" text="Connect" />
+      <Label fx:id="ip_wrong" layoutX="378.0" layoutY="92.0" prefHeight="33.0" prefWidth="133.0" />
+      <Label fx:id="ss_1" layoutX="19.0" layoutY="88.0" prefHeight="33.0" prefWidth="142.0" text="Select IP:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="ss_2" layoutX="16.0" layoutY="158.0" prefHeight="35.0" prefWidth="182.0" text="Select Port:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
    </children>
-   <padding>
-      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-   </padding>
-</VBox>
+</AnchorPane>

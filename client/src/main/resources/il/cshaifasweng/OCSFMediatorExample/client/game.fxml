@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="390.0" prefWidth="417.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="il.cshaifasweng.OCSFMediatorExample.client.Game">
+   <children>
+      <VBox layoutX="90.0" layoutY="100.0" prefHeight="225.0" prefWidth="211.0">
+         <children>
+            <HBox fx:id="first_line" prefHeight="69.0" prefWidth="314.0" spacing="10.0">
+               <children>
+                  <Button fx:id="zero_0" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#Press" prefHeight="30.0" prefWidth="30.0" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="one_1" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#Press" prefHeight="30.0" prefWidth="30.0">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="two_2" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#Press" prefHeight="30.0" prefWidth="30.0">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox fx:id="second_line" prefHeight="74.0" prefWidth="314.0" spacing="10.0">
+               <children>
+                  <Button fx:id="three_3" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#Press" prefHeight="30.0" prefWidth="30.0">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="four_4" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#Press" prefHeight="30.0" prefWidth="30.0">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="five_5" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#Press" prefHeight="30.0" prefWidth="30.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox fx:id="third_line" prefHeight="66.0" prefWidth="314.0" spacing="10.0">
+               <children>
+                  <Button fx:id="six_6" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#Press" prefHeight="30.0" prefWidth="30.0">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="seven_7" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#Press" prefHeight="30.0" prefWidth="30.0">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="eight_8" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#Press" prefHeight="30.0" prefWidth="30.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label fx:id="your" layoutX="28.0" layoutY="-15.0" prefHeight="101.0" prefWidth="167.0" text="Your sign:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="paste_symbol" layoutX="140.0" layoutY="6.0" prefHeight="59.0" prefWidth="32.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="current" layoutX="226.0" layoutY="-3.0" prefHeight="82.0" prefWidth="142.0" text="Current turn:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="paste_turn" layoutX="368.0" layoutY="18.0" prefHeight="47.0" prefWidth="24.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="winner_label" layoutX="11.0" layoutY="3.0" prefHeight="94.0" prefWidth="368.0">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

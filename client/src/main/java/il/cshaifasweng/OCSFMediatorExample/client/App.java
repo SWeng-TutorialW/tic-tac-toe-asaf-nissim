@@ -25,8 +25,9 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
     	EventBus.getDefault().register(this);
+        stage.setTitle("TicTacToe");
     	client = SimpleClient.getClient();
-    	client.openConnection();
+        //client.openConnection();
         scene = new Scene(loadFXML("primary"), 640, 480);
         stage.setScene(scene);
         stage.show();
@@ -40,7 +41,9 @@ public class App extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
         return fxmlLoader.load();
     }
-    
+    public static Scene getScene() {
+        return scene;
+    }
     
 
     @Override
