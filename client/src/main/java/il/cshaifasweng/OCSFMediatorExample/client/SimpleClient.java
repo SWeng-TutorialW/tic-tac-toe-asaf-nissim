@@ -47,11 +47,7 @@ public class SimpleClient extends AbstractClient {
 			}
 		}
 	}
-	public static void setClient(String host, int port) {
-		if (client == null) {
-			client = new SimpleClient(host, port);
-		}
-	}
+
 
 	public static SimpleClient getClient() {
 		if (client == null) {
