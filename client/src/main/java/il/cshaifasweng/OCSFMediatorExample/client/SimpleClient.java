@@ -55,6 +55,8 @@ public class SimpleClient extends AbstractClient {
 
 	public static SimpleClient getClient() {
 		if (client == null) {
+			System.out.println(ip);
+			System.out.println(port);
 			client = new SimpleClient(ip, port);
 		}
 		return client;
