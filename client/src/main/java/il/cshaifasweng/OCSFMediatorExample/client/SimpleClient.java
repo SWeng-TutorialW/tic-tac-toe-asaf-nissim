@@ -7,7 +7,9 @@ import il.cshaifasweng.OCSFMediatorExample.entities.Warning;
 
 public class SimpleClient extends AbstractClient {
 	
-	private static SimpleClient client = null;
+	public static SimpleClient client = null;
+	public static int port = 3000;
+	public static String ip = "localhost";
 
 
 	private SimpleClient(String host, int port) {
@@ -48,14 +50,12 @@ public class SimpleClient extends AbstractClient {
 		}
 	}
 	public static void setClient(String host, int port) {
-		if (client == null) {
-			client = new SimpleClient(host, port);
-		}
+		client = new SimpleClient(host, port);
 	}
 
 	public static SimpleClient getClient() {
 		if (client == null) {
-			client = new SimpleClient("localhost", 3000);
+			client = new SimpleClient(ip, port);
 		}
 		return client;
 	}

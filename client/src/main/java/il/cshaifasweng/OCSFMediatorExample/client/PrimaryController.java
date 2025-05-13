@@ -31,6 +31,7 @@ import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
 import static il.cshaifasweng.OCSFMediatorExample.client.App.*;
+import static il.cshaifasweng.OCSFMediatorExample.client.SimpleClient.client;
 
 
 public class PrimaryController  {
@@ -66,15 +67,16 @@ public class PrimaryController  {
 	@FXML
 	void Connect(ActionEvent event)
 	{
-		String ip = IP.getText().trim();
-		String portText = port_box.getText().trim();
-		int port = Integer.parseInt(portText);
-		SimpleClient.setClient(ip, port);
+
+		SimpleClient.ip = IP.getText();
+		SimpleClient.port = Integer.parseInt(port_box.getText());
+		client = SimpleClient.getClient();
+
 
 		try {
-			SimpleClient.getClient().openConnection();
-			SimpleClient.getClient().sendToServer("add client");
-			SimpleClient.getClient().sendToServer("how many players");
+			client.openConnection();
+			client.sendToServer("add client");
+			client.sendToServer("how many players");
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -96,6 +98,7 @@ public class PrimaryController  {
 			{
 				try {
 					SimpleClient.getClient().sendToServer("ask for X/0");
+
 
 				} catch (IOException e) {
 					e.printStackTrace();
@@ -141,12 +144,7 @@ public class PrimaryController  {
 	void initialize()
 	{
 		EventBus.getDefault().register(this);
-		try {
-			SimpleClient.getClient().sendToServer("add client");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+
 
 	}
 
